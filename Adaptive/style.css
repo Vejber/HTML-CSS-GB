@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+}
+
+.header {
+    height: 75px;
+    background-color: #222222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icons.right {
+    width: 250px;
+}
+
+.icons.left {
+    width: 150px;
+}
+
+.top_content {
+    background-color: #F1E4E6;
+    height: 764px;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.top_left {
+    background-image: url(img/man.png);
+}
+
+.top_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_text {
+    margin-left: 16px;
+}
+
+.text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 36px;
+    color: #222222;
+}
+
+.smaller {
+    font-size: 32px;
+    line-height: 18px;
+}
+
+.red {
+    color: #F16D7F;
+}
+
+.big {
+    font-size: 24px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 500px;
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+    padding-top: 45px;
+}
+
+.long {
+    grid-area: 2 / 1 / span 1 / span 3;
+}
+
+.cat_card {
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+.women {
+    background-image: url(img/women.png);
+}
+
+.men {
+    background-image: url(img/men.png);
+}
+
+.kids {
+    background-image: url(img/kids.png);
+}
+
+.long {
+    background-image: url(img/accesories.png);
+    margin-left: 11px;
+    margin-right: 11px;
+
+    /* как сделать лучше? чтобы края его были на одном уровне по оси х с краями верхних карточек */
+}
+
+.cat_card_text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    color: #222222;
+    font-family: 'Lato';
+}
+
+h4 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+}
+
+.items_text {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    margin-top: 25px;
+}
+
+.items_card_text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #5D5D5D;
+    margin-top: 16px;
+}
+
+.price {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #F16D7F;
+    margin-top: 16px;
+}
+
+.items_card {
+    width: 360px;
+    height: 581px;
+    padding-bottom: 19px;
+}
+
+.items_container {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.browse {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.browse_button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    border: 1px solid #F26376;
+    width: 210px;
+    height: 50px;
+}
