@@ -190,10 +190,13 @@ h2 {
 
 .items_card {
     width: 360px;
-    height: 581px;
     padding-bottom: 19px;
     background-color: #F8F8F8;
     margin-bottom: 30px;
+}
+
+.items_card img {
+    width: 100%;
 }
 
 .items_container {
@@ -211,6 +214,7 @@ h2 {
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 60px;
+
 }
 
 .browse_button {
@@ -225,15 +229,22 @@ h2 {
     background-color: white;
 }
 
+.items_card_text,
+.price {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.items_card h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     .header {
         padding-left: 50px;
         padding-right: 65px;
     }
-
-    /* .top_left img {
-        /* margin-left: -16%;
-    } */
 
     .top_content {
         height: 368px;
@@ -275,4 +286,74 @@ h2 {
         margin-bottom: 71px;
     }
 
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .lk,
+    .buy,
+    .top_left {
+        display: none;
+    }
+
+    .header {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .right {
+        width: 140px;
+    }
+
+    .top_content {
+        height: 363px;
+    }
+
+    .text {
+        font-size: 35px;
+        line-height: 23px;
+    }
+
+    .smaller {
+        font-size: 18px;
+    }
+
+    .top_right {
+        width: 100%;
+    }
+
+    .top_text {
+        margin-left: 8px;
+        margin-top: 9px;
+    }
+
+    .top_right img {
+        height: 15%;
+        width: 3%;
+    }
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 1040px;
+        padding-left: calc(50% - 150px);
+        padding-right: calc(50% - 150px);
+    }
+
+    .cat_card {
+        min-height: 250px;
+    }
+
+    .long {
+        min-height: 111px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .items {
+        margin-top: -55px;
+        padding-left: calc(50% - 155px);
+        padding-right: calc(50% - 155px);
+    }
 }
