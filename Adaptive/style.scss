@@ -175,7 +175,6 @@ h2 {
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
-
     color: #5D5D5D;
     margin-top: 16px;
 }
@@ -242,7 +241,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 48px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -626,7 +625,6 @@ h2 {
 .under_header {
     display: flex;
     justify-content: space-around;
-    width: 100%;
     align-items: center;
     background-color: #F8F3F4;
     height: 150px;
@@ -767,4 +765,189 @@ a {
 .item_page {
     margin-top: 130px;
     margin-bottom: 130px;
+}
+
+.catalog {
+    margin-bottom: 50px;
+}
+
+.main_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pages {
+        height: 30px;
+        width: 17vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 110px;
+        border: 1px solid $colorPages;
+        border-radius: 5px;
+        padding: 15px;
+        white-space: nowrap;
+
+        .catalog_text {
+            display: flex;
+            color: $colorPages;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+            &:hover {
+                color: $colorSelect;
+                cursor: pointer;
+            }
+        }
+
+        svg:hover {
+            cursor: pointer;
+        }
+
+
+    }
+
+    details {
+
+        summary {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+
+    .filter-sort {
+        align-self: flex-start;
+        position: relative;
+        height: 132px;
+        top: 51px;
+    }
+
+    .filter {
+        padding: 13px 16px 16px;
+        width: 360px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 24px;
+        z-index: 5;
+
+        &[open] .filter_heading {
+            color: $colorSelect;
+        }
+
+        &[open] svg path {
+            fill: $colorSelect;
+        }
+
+        &[open] {
+            background: white;
+            box-shadow: 6px 4px 32px rgba(0, 0, 0, 0.21);
+        }
+
+        &_heading {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: $colorBGC;
+        }
+
+        &_item {
+            margin-top: 16px;
+
+            &[open] .filter_item_summary {
+                color: $colorSelect;
+            }
+
+            &_summary {
+                color: $colorBreadCrumbs;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 8px 11px 11px 11px;
+                border-bottom: 1px solid $colorBorder;
+                border-left: 5px solid $colorSelect;
+            }
+        }
+
+        &_link {
+            color: $colorBreadCrumbs;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &:hover {
+                color: $colorSelect;
+            }
+        }
+
+        &_link-box {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 24px 16px;
+
+        }
+    }
+
+    .filter_summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+
+    .filter_thrice {
+        display: flex;
+        position: absolute;
+        left: 390px;
+        top: 24px;
+        padding-top: 13px;
+        padding-bottom: 16px;
+        bottom: 62px;
+        gap: 28px;
+        width: 360px;
+
+        &_inside {
+            display: flex;
+            gap: 10px;
+            position: relative;
+
+            .sort_box {
+                display: flex;
+                flex-direction: column;
+                z-index: 11;
+                position: absolute;
+                top: 22px;
+                background-color: white;
+                box-shadow: 6px 4px 32px rgba(0, 0, 0, 0.21);
+                padding: 7px 30px 11px 9px;
+                gap: 6px;
+                min-width: -webkit-fill-available;
+            }
+        }
+
+        .sort_heading {
+            color: $colorBreadCrumbs;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .sort_check {
+            display: flex;
+            gap: 9px;
+            color: #6F6E6E;
+            font-size: 14px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
 }
