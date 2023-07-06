@@ -627,6 +627,10 @@ a {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #EAEAEA;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .main_content_top svg:hover {
   cursor: pointer;

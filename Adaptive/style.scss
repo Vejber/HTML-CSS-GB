@@ -671,6 +671,10 @@ a {
         align-items: center;
         justify-content: space-between;
         border: 1px solid $colorBorder;
+        width: 100vw;
+        box-sizing: border-box;
+        padding-left: 0px;
+        padding-right: 0px;
 
         svg:hover {
             cursor: pointer;
