@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato';
+    transition: 1s;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .header {
@@ -372,6 +377,8 @@ h2 {
     border-bottom-left-radius: 50px;
     border: 0;
     padding-left: 8%;
+    outline: none;
+    color: $colorBreadCrumbs;
 }
 
 .subscribe {
@@ -428,26 +435,30 @@ h2 {
     padding-bottom: 33px;
     overflow: scroll;
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 6%);
+
+    & a {
+        color: inherit;
+    }
 }
 
 .menu_hidden h2 {
-    color: #000;
+    color: $colorBGC;
     font-size: 14px;
     font-weight: 700;
 }
 
-.menu_hidden li:first-child {
-    color: #F16D7F;
-    font-size: 14px;
-    line-height: 25px;
-}
-
 .menu_hidden ul li {
-    color: #6F6E6E;
+    color: $colorBreadCrumbs;
     font-size: 14px;
     list-style-type: none;
     line-height: 28px;
     margin-left: 20px;
+
+    &:first-child {
+        color: $colorSelect;
+        font-size: 14px;
+        line-height: 25px;
+    }
 }
 
 .options:focus .menu_hidden {
@@ -628,6 +639,10 @@ h2 {
     align-items: center;
     background-color: #F8F3F4;
     height: 150px;
+
+    &.left {
+        justify-content: left;
+    }
 
     p {
         color: $colorSelect;
@@ -953,5 +968,247 @@ a {
             font-weight: 400;
             line-height: normal;
         }
+    }
+}
+
+.cart_content {
+    padding-top: 96px;
+    padding-bottom: 128px;
+    display: flex;
+    gap: 128px;
+    overflow: hidden;
+}
+
+.cart_content_items {
+    width: 652px;
+}
+
+.cart_item {
+    width: 100%;
+    height: 306px;
+    box-shadow: $boxShadow;
+    display: flex;
+}
+
+.cart_items_box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.cart_text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 390px;
+    padding: 22px 97px 32px 61px;
+    box-sizing: border-box;
+
+    svg {
+        position: absolute;
+        top: 28px;
+        right: 22px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        color: $colorBreadCrumbs;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 38px;
+
+        .cart_red {
+            color: $colorSelect;
+        }
+
+        .cart_grey {
+            color: $colorPages;
+        }
+
+        .input_flex_row {
+            display: flex;
+            gap: 24px;
+            margin-top: -4px;
+            align-items: center;
+        }
+
+        #cart_item_input {
+            width: 44px;
+            height: 25px;
+            border: 1px solid $colorBorder;
+            outline: none;
+            text-align: center;
+            color: $colorBreadCrumbs;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+
+    h2 {
+        color: $colorBGC;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.cart_buttons {
+    margin-top: 72px;
+    width: 652px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        height: 100%;
+        color: $colorBGC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        border: 1px solid $colorBorder;
+        background-color: $bgcUniversal;
+    }
+
+    .button_cart_clear {
+        width: 235px;
+    }
+
+    .button_continue {
+        width: 225px;
+    }
+}
+
+.cart_form_button_quote {
+    margin-top: 3px;
+    width: 100px;
+    height: 35px;
+    background: white;
+    border: 1px solid $colorBorder;
+    color: $colorBGC;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.cart_form {
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+        color: $colorBGC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    input {
+        height: 45px;
+        width: 100%;
+        border: 1px solid $colorBorder;
+        color: $colorBGC;
+        outline: none;
+        padding: 13px 17px 16px 17px;
+        box-sizing: border-box;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &::placeholder {
+            color: inherit;
+        }
+
+        &#city {
+            color: $colorBreadCrumbs;
+
+            &::placeholder {
+                color: inherit;
+            }
+        }
+
+
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+.cart_final {
+    width: 360px;
+    height: 214px;
+    background-color: $colorItemBgc;
+    margin-top: 57px;
+    padding: 39px 34px 42px 44px;
+    box-sizing: border-box;
+
+    .text_small {
+        color: $colorBreadCrumbs;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        gap: 12px;
+    }
+
+    .text_big {
+        color: $colorBGC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        display: flex;
+        gap: 18px;
+
+        span {
+            font-weight: 500;
+            color: $colorSelect;
+        }
+    }
+
+    .cart_final_text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-end;
+        border-bottom: 1px solid $colorBorder;
+        padding-bottom: 21px;
+    }
+
+    .cart_final_button {
+        height: 50px;
+        width: 100%;
+        margin-top: 17px;
+        color: $bgcUniversal;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        background-color: $colorSelect;
+        border: none;
     }
 }
